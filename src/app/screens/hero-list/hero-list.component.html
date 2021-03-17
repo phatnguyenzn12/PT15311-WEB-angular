@@ -1,0 +1,14 @@
+<p>hero-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-3" *ngFor="let hero of heroes">
+            <img [src]="hero.image" class="img-thumbnail">
+            <p>
+                <strong>{{hero.name}}</strong>
+            </p>
+            <div *ngIf="hero.skills != undefined">
+                <span *ngFor="let skill of hero.skills" class="badge text-white bg-success">{{skill.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
