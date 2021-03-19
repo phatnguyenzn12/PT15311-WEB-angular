@@ -93,4 +93,8 @@ export class HeroListComponent implements OnInit {
       skills: []
     }
   }
+
+  updateHero(hero: Hero){
+    this.formObject = {...hero};
+  }
 }

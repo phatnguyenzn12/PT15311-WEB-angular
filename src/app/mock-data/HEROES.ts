@@ -8,11 +8,11 @@ export const HEROES: Array<Hero> = [
         skills: [
             {
                 id: 1,
-                name: "php"
+                name: "java"
             },
             {
                 id: 2,
-                name: "html"
+                name: "C-Sharp"
             }
         ]
     },
@@ -22,12 +22,12 @@ export const HEROES: Array<Hero> = [
         image: "https://iap.poly.edu.vn/user/ph/PH11120.jpg",
         skills: [
             {
-                id: 3,
-                name: "css"
+                id: 1,
+                name: "java"
             },
             {
-                id: 1,
-                name: "php"
+                id: 3,
+                name: "PHP"
             }
         ]
     },
@@ -35,5 +35,6 @@ export const HEROES: Array<Hero> = [
         id: 3,
         name: "Nguyễn Văn Tân",
         image: "https://iap.poly.edu.vn/user/ph/PH11473.jpg",
+        skills: []
     }
 ]
