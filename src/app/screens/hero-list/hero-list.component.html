@@ -1,6 +1,30 @@
 <p>hero-list works!</p>
 <div class="container">
     <div class="row">
+        <div class="col-6">
+            <form action="">
+                <div class="form-group">
+                    <label for="">ID</label>
+                    <input type="text" name="id" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Image</label>
+                    <input type="text" name="image" class="form-control">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Default checkbox
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-3" *ngFor="let hero of heroes">
             <img [src]="hero.image" class="img-thumbnail">
             <p>
