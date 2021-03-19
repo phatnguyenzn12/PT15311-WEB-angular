@@ -74,7 +74,17 @@ export class HeroListComponent implements OnInit {
         this.formObject.image = attrValue
         break;
     }
-    console.log(this.formObject);
+  }
 
+  toggleFormSkill(formSkill: Skill, status: Boolean){
+    if(status == true){
+      let index = this.formObject.skills.findIndex(el => el.id == formSkill.id);
+      if(index == -1){
+        this.formObject.skills.push({...formSkill});
+      }
+    }else{
+      this.formObject.skills = {...this.formObject}.skills.filter(el => el.id != formSkill.id);
+    }
+    console.log(this.formObject);
   }
 }

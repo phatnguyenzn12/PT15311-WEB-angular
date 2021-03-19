@@ -16,7 +16,11 @@
                     <input type="text" name="image" (change)="updateFormAttr('image', $event.target.value)" [value]="formObject.image" class="form-control">
                 </div>
                 <div class="form-check" *ngFor="let formSkill of listSkill">
-                    <input class="form-check-input" [checked]="checkboxStatus(formSkill.id)" type="checkbox" id="skill-{{formSkill.id}}">
+                    <input class="form-check-input" 
+                        (click)="toggleFormSkill(formSkill, $event.target.checked)"
+                        [checked]="checkboxStatus(formSkill.id)" 
+                        type="checkbox" 
+                        id="skill-{{formSkill.id}}">
                     <label class="form-check-label" for="skill-{{formSkill.id}}">
                         {{formSkill.name}}
                     </label>
