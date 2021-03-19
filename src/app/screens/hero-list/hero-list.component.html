@@ -21,9 +21,13 @@
                     Default checkbox
                     </label>
                 </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
             </form>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col-3" *ngFor="let hero of heroes">
             <img [src]="hero.image" class="img-thumbnail">
