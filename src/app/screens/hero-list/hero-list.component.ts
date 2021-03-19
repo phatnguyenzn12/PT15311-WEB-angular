@@ -33,16 +33,7 @@ export class HeroListComponent implements OnInit {
     id: 0,
     name: "",
     image: "",
-    skills: [
-      {
-        id: 1,
-        name: "java"
-      },
-      {
-        id: 4,
-        name: "javascript"
-      }
-    ]
+    skills: []
   }
   /**
    * tạo model + dữ liệu cho danh sách monster
@@ -86,5 +77,20 @@ export class HeroListComponent implements OnInit {
       this.formObject.skills = {...this.formObject}.skills.filter(el => el.id != formSkill.id);
     }
     console.log(this.formObject);
+  }
+
+  saveForm(event: any){
+    event.preventDefault();
+    this.heroes.push({...this.formObject});
+    this.resetForm();
+  }
+
+  resetForm(){
+    this.formObject = {
+      id: 0,
+      name: "",
+      image: "",
+      skills: []
+    }
   }
 }
