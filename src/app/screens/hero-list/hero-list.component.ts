@@ -3,7 +3,6 @@ import { Skill } from 'src/app/models/skill';
 import { HEROES } from '../../mock-data/HEROES';
 import { Hero } from '../../models/hero';
 
-
 @Component({
   selector: 'app-hero-list',
   templateUrl: './hero-list.component.html',
@@ -107,5 +106,8 @@ export class HeroListComponent implements OnInit {
 
   updateHero(hero: Hero){
     this.formObject = {...hero};
+  }
+  removeHero(hero: Hero){
+    this.heroes = this.heroes.filter(el => el.id != hero.id);
   }
 }
