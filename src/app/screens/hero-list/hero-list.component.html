@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-3" *ngFor="let hero of heroes">
             <hero-unit  
-                (delete)="removeHeroFromList()"
+                (delete)="removeHeroFromList($event)"
                 [hero-data]="hero"></hero-unit>
         </div>
     </div>

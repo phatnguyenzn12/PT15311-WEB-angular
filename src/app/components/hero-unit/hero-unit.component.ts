@@ -9,7 +9,7 @@ import { Hero } from 'src/app/models/hero';
 })
 export class HeroUnitComponent implements OnInit {
   @Input("hero-data") heroData: Hero;
-  @Output() delete = new EventEmitter();
+  @Output() delete = new EventEmitter<Hero>();
   constructor() { }
 
   ngOnInit(): void {
@@ -19,8 +19,7 @@ export class HeroUnitComponent implements OnInit {
   }
 
   removeHero(){
-    console.log("HeroUnitComponent - removeHero()");
-    this.delete.emit();
+    this.delete.emit(this.heroData);
   }
 
 }
