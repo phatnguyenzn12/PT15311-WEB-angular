@@ -81,7 +81,18 @@ export class HeroListComponent implements OnInit {
 
   saveForm(event: any){
     event.preventDefault();
-    this.heroes.push({...this.formObject});
+    // ktra nếu id đã tồn tại trong list heroes rồi
+    // cập nhật lại dữ liệu của phần từ khớp với index
+    // nếu id chưa tồn tại
+    // thực hiện thêm mới => push data vào this.heroes
+    let index = this.heroes.findIndex(
+                                item => item.id == this.formObject.id
+                              );
+    if(index == -1){
+      this.heroes.push({...this.formObject});
+    }else{
+      this.heroes[index] = {...this.formObject};
+    }
     this.resetForm();
   }
 
