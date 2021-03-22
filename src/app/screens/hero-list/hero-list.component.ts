@@ -110,4 +110,8 @@ export class HeroListComponent implements OnInit {
   removeHero(hero: Hero){
     this.heroes = this.heroes.filter(el => el.id != hero.id);
   }
+
+  removeHeroFromList(){
+    console.log("HeroListComponent - removeHeroFromList()");
+  }
 }
