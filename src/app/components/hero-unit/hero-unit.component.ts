@@ -13,5 +13,12 @@ export class HeroUnitComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  updateHero(){
+
+  }
+
+  removeHero(){
+    
+  }
 
 }

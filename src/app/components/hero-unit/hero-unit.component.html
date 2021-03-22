@@ -1,1 +1,11 @@
-<p>{{heroData.name}}</p>
+            
+<img [src]="heroData.image" class="img-thumbnail">
+<p>
+    <strong>{{heroData.name}}</strong>
+</p>
+<div *ngIf="heroData.skills != undefined">
+    <span *ngFor="let skill of heroData.skills" class="badge text-white bg-success">{{skill.name}}</span>
+</div>
+<button class="btn btn-info" (click)="updateHero()">Update</button>
+<button class="btn btn-danger" 
+        (click)="removeHero()">Remove</button>

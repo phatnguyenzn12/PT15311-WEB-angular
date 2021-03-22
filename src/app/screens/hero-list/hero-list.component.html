@@ -33,20 +33,9 @@
     </div>
     <br>
     <div class="row">
-        <hero-unit *ngFor="let hero of heroes" 
-            [hero-data]="hero"></hero-unit>
-        <!-- <div class="col-3">
-            
-            <img [src]="hero.image" class="img-thumbnail">
-            <p>
-                <strong>{{hero.name}}</strong>
-            </p>
-            <div *ngIf="hero.skills != undefined">
-                <span *ngFor="let skill of hero.skills" class="badge text-white bg-success">{{skill.name}}</span>
-            </div>
-            <button class="btn btn-info" (click)="updateHero(hero)">Update</button>
-            <button class="btn btn-danger" 
-                (click)="removeHero(hero)">Remove</button>
-        </div> -->
+        <div class="col-3" *ngFor="let hero of heroes">
+            <hero-unit  
+                [hero-data]="hero"></hero-unit>
+        </div>
     </div>
 </div>
