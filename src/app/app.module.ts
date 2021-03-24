@@ -7,6 +7,7 @@ import { HeroListComponent } from './screens/hero-list/hero-list.component';
 import { HeroDetailComponent } from './screens/hero-detail/hero-detail.component';
 import { HeroUnitComponent } from './components/hero-unit/hero-unit.component';
 import { HeroFormComponent } from './components/hero-form/hero-form.component';
+import { GenderPipe } from './pipes/gender.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeroFormComponent } from './components/hero-form/hero-form.component';
     HeroDetailComponent,
     HeroUnitComponent,
     HeroFormComponent,
+    GenderPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "sách kinh tế"
+        },
+        {
+            "id": 2,
+            "name": "sách bói toán"
+        }
+    ],
+    "books": [
+        {
+            "id": 1,
+            "title": "CẨM NANG MUA BÁN ĐẤT",
+            "price": 150000,
+            "categoryId": 1,
+            "authorId": 1,
+            "image": "https://salt.tikicdn.com/cache/w444/ts/product/44/03/b1/f797420579b8e0f5c84a1278d23053ec.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Thay Đổi Cuộc Sống Với Nhân Số Học",
+            "price": 155800,
+            "categoryId": 2,
+            "authorId": 1,
+            "image": "https://salt.tikicdn.com/cache/w444/ts/product/15/11/f8/56b303e000cb42faada663569fc5d7c9.jpg"
+        }
+    ],
+    "authors": [
+        {
+            "id": 1,
+            "name": "Đỗ Đăng Khoa"
+        },
+        {
+            "id": 2,
+            "name": "Lê Đỗ Quỳnh Hương"
+        }
+    ]
+}
