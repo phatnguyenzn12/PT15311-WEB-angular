@@ -104,7 +104,7 @@ export class HeroListComponent implements OnInit {
     }
   }
 
-  updateHero(hero: Hero){
+  updateFormObject(hero: Hero){
     this.formObject = {...hero};
   }
 
