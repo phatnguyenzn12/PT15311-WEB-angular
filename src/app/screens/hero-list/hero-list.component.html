@@ -2,33 +2,10 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <form action="" (submit)="saveForm($event)">
-                <div class="form-group">
-                    <label for="">ID</label>
-                    <input type="text" name="id" (change)="updateFormAttr('id', $event.target.value)" [value]="formObject.id" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="name" (change)="updateFormAttr('name', $event.target.value)" [value]="formObject.name" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="">Image</label>
-                    <input type="text" name="image" (change)="updateFormAttr('image', $event.target.value)" [value]="formObject.image" class="form-control">
-                </div>
-                <div class="form-check" *ngFor="let formSkill of listSkill">
-                    <input class="form-check-input" 
-                        (click)="toggleFormSkill(formSkill, $event.target.checked)"
-                        [checked]="checkboxStatus(formSkill.id)" 
-                        type="checkbox" 
-                        id="skill-{{formSkill.id}}">
-                    <label class="form-check-label" for="skill-{{formSkill.id}}">
-                        {{formSkill.name}}
-                    </label>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary" type="submit">Save</button>
-                </div>
-            </form>
+            <hero-form
+                [formObject]="heroFormObject"
+                (saveEvent)="saveForm($event)"
+            ></hero-form>
         </div>
     </div>
     <br>
