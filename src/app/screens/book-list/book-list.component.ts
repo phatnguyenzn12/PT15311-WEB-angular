@@ -13,7 +13,7 @@ export class BookListComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookService.getAll().subscribe(data => {
-      console.log(data);
+      this.books = data;
     })
   }
 
