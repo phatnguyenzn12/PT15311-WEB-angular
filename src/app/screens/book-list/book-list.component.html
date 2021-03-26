@@ -1,4 +1,6 @@
 <p>book-list works!</p>
 <ul>
-    <li *ngFor="let b of books">{{b.title | titlecase}}</li>
+    <li *ngFor="let b of books">
+        <a href="javascript:;" routerLink="detail/{{b.id}}">{{b.title | titlecase}}</a>
+    </li>
 </ul>
