@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-book-detail',
@@ -7,13 +8,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
+  
   bookId: string;
-  constructor(private route: ActivatedRoute) { }
+  book = null;
+  constructor(private route: ActivatedRoute,
+              private bookService: BookService
+    ) { }
 
-  ngOnInit(): void {
-    this.route.params.subscribe(params => {
+  async ngOnInit() {
+    await this.route.params.subscribe(params => {
       this.bookId = params['xxx'];
-    })
+    });
+
+    await this.bookService.findById(this.bookId).subscribe(data => {
+      console.log(data);
+      this.book = data;
+    });
   }
 
 }
