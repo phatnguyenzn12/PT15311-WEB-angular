@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookListComponent } from './screens/book-list/book-list.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ClientLayoutComponent } from './layouts/client-layout/client-layout.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

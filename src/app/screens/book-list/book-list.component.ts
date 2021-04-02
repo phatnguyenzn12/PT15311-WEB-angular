@@ -9,10 +9,39 @@ import { BookService } from 'src/app/services/book.service';
 export class BookListComponent implements OnInit {
   books: any[];
 
+  filterObject = {
+    keyword: "",
+    orderBy: "1"
+  }
+
+  orderCondition: any[] = [
+    {
+      id: "1",
+      name: "Giá tăng dần"
+    },
+    {
+      id: "2",
+      name: "Giá giảm dần"
+    },
+    {
+      id: "3",
+      name: "Tên tăng dần"
+    },
+    {
+      id: "4",
+      name: "Tên giảm dần"
+    }
+  ];
+  
+
   constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.bookService.getAll().subscribe(data => {
+    this.search();
+  }
+
+  search(){
+    this.bookService.getAll(this.filterObject).subscribe(data => {
       this.books = data;
     })
   }
