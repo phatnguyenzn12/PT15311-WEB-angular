@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/category';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-client-layout',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientLayoutComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private categoryService: CategoryService) { }
+  cates: Category[] = [];
   ngOnInit(): void {
+    this.getMenuData();
+  }
+
+  getMenuData(){
+    this.categoryService.all().subscribe(data => {
+      this.cates = data;
+    });
   }
 
 }

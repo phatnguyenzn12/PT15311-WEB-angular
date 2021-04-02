@@ -11,7 +11,7 @@ const routes: Routes = [
     component: ClientLayoutComponent,
     children: [
       {
-        path: "books",
+        path: "",
         component: BookListComponent,
       },
       {
