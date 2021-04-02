@@ -17,11 +17,10 @@ export class BookDetailComponent implements OnInit {
 
   async ngOnInit() {
     await this.route.params.subscribe(params => {
-      this.bookId = params['xxx'];
+      this.bookId = params.xxx;
     });
 
     await this.bookService.findById(this.bookId).subscribe(data => {
-      console.log(data);
       this.book = data;
     });
   }

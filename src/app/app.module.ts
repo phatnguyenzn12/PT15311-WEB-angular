@@ -11,6 +11,7 @@ import { GenderPipe } from './pipes/gender.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { BookListComponent } from './screens/book-list/book-list.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BookDetailComponent } from './screens/book-detail/book-detail.component
     GenderPipe,
     BookListComponent,
     BookDetailComponent,
+    ClientLayoutComponent,
   ],
   imports: [
     BrowserModule,
