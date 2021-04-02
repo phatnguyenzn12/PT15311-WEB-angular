@@ -14,7 +14,7 @@ export class BookService {
     return this.http.get<any>(requestApi);
   }
 
-  findById(bookId): Observable<any>{
+  findById(bookId: string): Observable<any>{
     let requestApi = `${this.API_URL}/${bookId}?_expand=category&_expand=author`;
     return this.http.get<any>(requestApi);
   }
