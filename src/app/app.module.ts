@@ -13,6 +13,9 @@ import { BookListComponent } from './screens/book-list/book-list.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { FormsModule } from '@angular/forms';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { DashboardComponent } from './screens/admin/dashboard/dashboard.component';
+import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { FormsModule } from '@angular/forms';
     BookListComponent,
     BookDetailComponent,
     ClientLayoutComponent,
+    AdminLayoutComponent,
+    DashboardComponent,
+    DanhSachComponent,
   ],
   imports: [
     BrowserModule,
