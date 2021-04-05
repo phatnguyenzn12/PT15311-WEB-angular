@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/category';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-danh-sach',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./danh-sach.component.css']
 })
 export class DanhSachComponent implements OnInit {
-
-  constructor() { }
+  cates!: Category[];
+  constructor(private cateService: CategoryService) { }
 
   ngOnInit(): void {
+    this.getCatesData();
+  }
+
+  getCatesData(){
+    this.cateService.all().subscribe(data => {
+      this.cates = data;
+    })
   }
 
 }

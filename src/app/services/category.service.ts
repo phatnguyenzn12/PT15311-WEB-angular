@@ -10,7 +10,9 @@ export class CategoryService {
   API_URL = "http://localhost:3000/categories";
   constructor(private http: HttpClient){}
   
-  all(): Observable<Category[]>{
-    return this.http.get<Category[]>(this.API_URL);
+  all(embed: boolean = true): Observable<Category[]>{
+    let requestUrl = this.API_URL;
+    if(embed) requestUrl += '?_embed=books';
+    return this.http.get<Category[]>(requestUrl);
   }
 }
