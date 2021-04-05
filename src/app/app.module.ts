@@ -12,10 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookListComponent } from './screens/book-list/book-list.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './screens/admin/dashboard/dashboard.component';
 import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
+import { AddComponent } from './screens/admin/danh-muc/add/add.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +32,14 @@ import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.
     AdminLayoutComponent,
     DashboardComponent,
     DanhSachComponent,
+    AddComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

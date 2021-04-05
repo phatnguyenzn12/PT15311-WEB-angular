@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AddComponent } from './screens/admin/danh-muc/add/add.component';
 import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
 import { DashboardComponent } from './screens/admin/dashboard/dashboard.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
@@ -38,7 +39,11 @@ const routes: Routes = [
       },
       {
         path: "danh-muc",
-        component: DanhSachComponent
+        component: DanhSachComponent,
+      },
+      {
+        path: "danh-muc/add",
+        component: AddComponent
       }
     ]
   }
