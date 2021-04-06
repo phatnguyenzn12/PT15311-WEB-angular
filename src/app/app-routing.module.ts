@@ -4,6 +4,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { AddComponent } from './screens/admin/danh-muc/add/add.component';
 import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
+import { EditComponent } from './screens/admin/danh-muc/edit/edit.component';
 import { DashboardComponent } from './screens/admin/dashboard/dashboard.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
 import { BookListComponent } from './screens/book-list/book-list.component';
@@ -44,6 +45,10 @@ const routes: Routes = [
       {
         path: "danh-muc/add",
         component: AddComponent
+      },
+      {
+        path: "danh-muc/edit/:id",
+        component: EditComponent
       }
     ]
   }

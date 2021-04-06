@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-add',
@@ -8,7 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddComponent implements OnInit {
   cateForm: FormGroup;
-  constructor() { 
+  constructor(private cateService: CategoryService,
+              private router: Router) { 
     this.cateForm = this.createForm();
   }
 
@@ -27,6 +30,13 @@ export class AddComponent implements OnInit {
 
   get f(){
     return this.cateForm.controls;
+  }
+
+  saveCate(event: any){
+    event.preventDefault();
+    this.cateService.store(this.cateForm.value).subscribe(data => {
+      this.router.navigate(['/admin/danh-muc']);
+    })
   }
 
 }

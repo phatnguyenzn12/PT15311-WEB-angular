@@ -17,7 +17,7 @@
                 <a href="javascript:;" class="btn btn-info"
                 routerLink="/admin/danh-muc/edit/{{cate.id}}">Sửa</a>
                 &nbsp;
-                <a href="javascript:;" class="btn btn-danger" >Xóa</a>
+                <a href="javascript:;" (click)="deleteCate(cate.id)" class="btn btn-danger" >Xóa</a>
             </td>
         </tr>
     </tbody>

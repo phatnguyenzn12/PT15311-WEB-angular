@@ -38,6 +38,11 @@ export class BookService {
     return this.http.get<any>(requestApi);
   }
 
+  removeBook(id: any): Observable<any>{
+    let requestUrl = `${this.API_URL}/${id}`;
+    return this.http.delete<any>(requestUrl);
+  }
+
   updateBook(data){
 
   }

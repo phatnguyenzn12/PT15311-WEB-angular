@@ -17,6 +17,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { DashboardComponent } from './screens/admin/dashboard/dashboard.component';
 import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
 import { AddComponent } from './screens/admin/danh-muc/add/add.component';
+import { EditComponent } from './screens/admin/danh-muc/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AddComponent } from './screens/admin/danh-muc/add/add.component';
     DashboardComponent,
     DanhSachComponent,
     AddComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
