@@ -6,6 +6,7 @@ import { AddComponent } from './screens/admin/danh-muc/add/add.component';
 import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
 import { EditComponent } from './screens/admin/danh-muc/edit/edit.component';
 import { DashboardComponent } from './screens/admin/dashboard/dashboard.component';
+import { DemoUploadComponent } from './screens/admin/demo-upload/demo-upload.component';
 import { BookDetailComponent } from './screens/book-detail/book-detail.component';
 import { BookListComponent } from './screens/book-list/book-list.component';
 import { HeroListComponent } from './screens/hero-list/hero-list.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
         path: "",
         redirectTo: "dashboard",
         pathMatch: "full"
+      },
+      {
+        path: "file-upload",
+        component: DemoUploadComponent
       },
       {
         path: "dashboard",

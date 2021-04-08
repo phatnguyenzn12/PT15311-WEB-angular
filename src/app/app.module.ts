@@ -18,6 +18,10 @@ import { DashboardComponent } from './screens/admin/dashboard/dashboard.componen
 import { DanhSachComponent } from './screens/admin/danh-muc/danh-sach/danh-sach.component';
 import { AddComponent } from './screens/admin/danh-muc/add/add.component';
 import { EditComponent } from './screens/admin/danh-muc/edit/edit.component';
+import { DemoUploadComponent } from './screens/admin/demo-upload/demo-upload.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -35,13 +39,16 @@ import { EditComponent } from './screens/admin/danh-muc/edit/edit.component';
     DanhSachComponent,
     AddComponent,
     EditComponent,
+    DemoUploadComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
