@@ -1,4 +1,5 @@
 <form action="" [formGroup]="uploadForm">
+    {{uploadForm.value | json}}
     <div class="row">
         <div class="col-6">
             <div class="form-group">
@@ -12,7 +13,9 @@
             </div>
             <div class="form-group">
                 <label for="">Ảnh</label>
-                <input type="file" class="form-control">
+                <input type="file" 
+                    (change)="upload($event)"
+                    class="form-control">
             </div>
         </div>
     </div>
